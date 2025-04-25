@@ -262,3 +262,26 @@ Remember: These standards are guidelines, not rules. Use judgment and adapt to s
 ## Technology Stack
 
 Note: Specific technology choices (languages, frameworks, tools) will be documented separately once decided. These standards focus on principles that apply regardless of the specific technologies chosen.
+
+## Version Control
+
+### Git Workflow
+
+1. **Regular Check-ins**
+   - Commit changes at least daily
+   - Create meaningful commit messages that describe what and why
+   - Break large changes into smaller, logical commits
+   - Push to remote repository regularly to ensure backup
+   - Never leave work uncommitted at the end of the day
+
+2. **Branch Strategy**
+   - `main` branch is always production-ready
+   - Create feature branches for new work
+   - Use descriptive branch names (e.g., `feature/user-auth`)
+   - Delete branches after merging
+
+3. **Commit Messages**
+   - Use present tense ("Add feature" not "Added feature")
+   - Keep first line under 50 characters
+   - Add detailed description if needed
+   - Reference issue numbers when applicable
