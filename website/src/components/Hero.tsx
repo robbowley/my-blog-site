@@ -115,7 +115,7 @@ export default function Hero() {
       {heroContent.background_image && (
         <div className="absolute inset-0 z-0">
           <Image
-            src={`http://localhost:8055/assets/${heroContent.background_image.id}`}
+            src={`${process.env.NEXT_PUBLIC_API_URL}/assets/${heroContent.background_image.id}`}
             alt="Hero background"
             fill
             className="object-cover"
