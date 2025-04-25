@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { renderBlockEditor } from '@/utils/blockEditor';
+import { renderBlockEditor } from '../utils/blockEditor';
 
 interface HeroContent {
   title: string;
