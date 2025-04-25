@@ -6,7 +6,16 @@ import { renderBlockEditor } from '@/utils/blockEditor';
 
 interface HeroContent {
   title: string;
-  subtitle: any; // Using any for now as the block editor content is complex
+  subtitle: {
+    time: number;
+    blocks: Array<{
+      type: string;
+      data: {
+        text: string;
+      };
+    }>;
+    version: string;
+  };
   cta_text?: string;
   cta_link?: string;
   background_image?: {
@@ -122,7 +131,7 @@ export default function Hero() {
         </h1>
         
         <div className={`text-xl md:text-2xl mb-8 ${heroContent.background_image ? 'text-white' : 'text-gray-600'}`}>
-          {renderBlockEditor(heroContent.subtitle)}
+          {heroContent.subtitle && renderBlockEditor(heroContent.subtitle)}
         </div>
 
         {heroContent.cta_text && heroContent.cta_link && (
