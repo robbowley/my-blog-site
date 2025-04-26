@@ -1,0 +1,10 @@
+{
+  "rules": [
+    {
+      "name": "development standards",
+      "description": "Ensures all code follows our team's development standards and best practices for maintainable, pragmatic code.",
+      "autoAttachments": ["onPR", "onPush"],
+      "doc": "./rules/development-standards.mdc"
+    }
+  ]
+} 

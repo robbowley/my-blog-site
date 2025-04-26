@@ -46,28 +46,29 @@ Always be open to suggesting and considering better approaches when:
 ## Core Principles
 
 ### Code Organization
-- Group files by feature/domain, not by type
+- Follow Next.js conventions for project structure
   ```
   ✅ Good:
-  blog/
-    post-list
-    post-editor
-    post-data
-    post-reducer
-    tests/
-      post-list.test
+  src/
+    app/           # Next.js app router pages and layouts
+    components/    # Reusable UI components
+    utils/         # Utility functions and helpers
+    lib/          # Third-party library configurations
+    types/        # TypeScript type definitions
+    styles/       # Global styles and theme
+    hooks/        # Custom React hooks
+    tests/        # Test files matching source structure
 
   ❌ Avoid:
-  components/
-    post-list
-  data/
-    post-data
-  reducers/
-    post-reducer
+  features/
+    feature-a/
+    feature-b/
   ```
 
-- Keep related code close together - if files change together, they should live together
+- Keep related code close together within the appropriate directory
 - Use clear, intention-revealing names that reflect business concepts
+- Place components close to where they are used when they are specific to a feature
+- Use the app directory for routing and page-specific components
 
 ### Design Philosophy
 - Prefer composition over inheritance
