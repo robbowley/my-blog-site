@@ -76,4 +76,37 @@ Currently in initial setup phase:
 
 ## Contributing
 
-Please read our [Development Standards](.cursor/rules/development-standards.mdc) before contributing to the project. 
+Please read our [Development Standards](.cursor/rules/development-standards.mdc) before contributing to the project.
+
+### 4. **Run the Frontend Dev Server**
+
+```bash
+npm run dev
+```
+
+- The website will be available at [http://localhost:3000](http://localhost:3000).
+
+### 5. **Access Directus Admin**
+
+- Go to [http://localhost:8055/admin](http://localhost:8055/admin) to manage content.
+- Create collections (e.g., hero, articles, testimonials) as needed.
+
+## Running Tests
+
+### **Unit/Integration Tests (Jest)**
+
+```bash
+cd website
+npm test
+```
+
+### **End-to-End (E2E) Tests (Playwright)**
+
+- Make sure both the backend and frontend are running.
+- From the project root:
+
+```bash
+npm run test:e2e
+```
+
+- E2E tests are located in `e2e-tests/`. 
