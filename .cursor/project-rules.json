@@ -3,8 +3,14 @@
     {
       "name": "development standards",
       "description": "Ensures all code follows our team's development standards and best practices for maintainable, pragmatic code.",
-      "autoAttachments": ["onPR", "onPush"],
+      "autoAttachments": ["always"],
       "doc": "./rules/development-standards.mdc"
+    }
+    {
+      "name": "project documentation",
+      "description": "All project documentation including overview, content architecture, and architectural decisions",
+      "autoAttachments": ["always"],
+      "doc": "../docs"
     }
   ]
 } 
