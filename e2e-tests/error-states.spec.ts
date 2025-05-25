@@ -1,10 +1,22 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Standard error and fallback states', () => {
-  test('shows 404 page for missing route', async ({ page }) => {
+  
+    test('shows 404 page for missing route', async ({ page }) => {
     await page.goto('/this-page-does-not-exist');
     // Adjust the text below to match your actual 404 message
     await expect(page.getByText(/not found/i)).toBeVisible();
+  });
+
+  test('404 pages shows return home button', async ({ page }) => {
+    await page.goto('/this-page-does-not-exist');
+    await expect(page.getByRole('link', { name: /Return Home/i })).toBeVisible();
+  });
+
+  test('404 pages return home button returns to home page', async ({ page }) => {
+    await page.goto('/this-page-does-not-exist');
+    await page.getByRole('link', { name: /Return Home/i }).click();
+    await expect(page).toHaveURL('/');
   });
 
   test('shows error message when hero content fails to load', async ({ page }) => {
